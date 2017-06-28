@@ -1,0 +1,22 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<ion-title>Notification</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content>
+
+
+	<a *ngFor="let note of notes" (click)="jumpToUserLocation(note)">
+		<ion-card>
+			<ion-card-header>
+				Help <span style="float:right"><b>{{(note[4] === 'c')? 'Citizen' : 'Police'}}</b></span>
+			</ion-card-header>
+			<ion-card-content>
+				<b>{{note[3]}}</b>
+				<p>{{note[0]}} : {{note[1]}}, {{note[2]}}</p>
+				<!--<p>{{note[5]}}</p>-->
+			</ion-card-content>
+
+		</ion-card>
+	</a>
+</ion-content>
